@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+* {
+    margin: 0;
+    width: 100%;
+}
+
+html,
+body {
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: -moz-linear-gradient(-45deg, rgba(241, 249, 255, 1) 0%, rgba(203, 235, 255, 1) 47%, rgba(161, 219, 255, 1) 100%) no-repeat ;
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(241, 249, 255, 1) 0%, rgba(203, 235, 255, 1) 47%, rgba(161, 219, 255, 1) 100%) no-repeat;
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(241, 249, 255, 1) 0%, rgba(203, 235, 255, 1) 47%, rgba(161, 219, 255, 1) 100%) no-repeat;
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f9ff', endColorstr='#a1dbff', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+        color: #707070;
+    background-attachment: fixed;
+}
+
+.title {
+    font-weight: 700;
+    font-size: clamp(25px, 10vw, 80px);
+    margin-bottom: 30px;
+}
+
+.container{
+    max-width: 800px;
+    min-height: 100%;
+}
+
+input {
+    background: url(./images/search.png) right 20px center no-repeat;
+    background-size: 30px;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.card-rounded {
+    animation: 350ms ease-in-out slideInFromBottom;
+}
+
+.form-rounded {
+    border-radius: 2em;
+}
+
+.back-card {
+    border-radius: 30px !important;
+    background: white !important;
+}
+
+.city-name {
+    position: relative;
+    width: 100%;
+}
+
+.city-name p {
+    font-size: clamp(25px, 8vw, 70px);
+}
+
+.temp {
+    font-size: clamp(60px, 15vw, 120px);
+    font-weight: 100;
+    letter-spacing: -4px;
+    top: -30px;
+    color: #757575;
+    justify-content: center;
+    align-content: center;
+}
+.condition {
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+.icon-container {
+    position: flex;
+    top: -10px;
+    align-items: center;
+    border-radius: 100%;
+    width: fit-content;
+}
+.weather-icon {
+    position: flex;
+    height: 150px;
+    width: 150px;
+    padding: 20px 20px;
+}
+
+.condition-temp p {
+    position: flex;
+    text-align: center;
+}
+
+.high {
+    color: rgb(182, 76, 76);
+}
+
+.low {
+    color: rgb(57, 57, 163);
+}
+
+.high, .low {
+    font-weight: 400;
+    font-size: clamp (30px, 10vw, 45px);
+}
+.card-bottom {
+    line-height: 0.7;
+    width: 50%;
+    justify-content: center;
+    padding-right: 0px !important;
+    margin-right: 10px !important;
+    
+}
+
+.card-bottom span {
+    font-size: 12px;
+}
+
+.card-bottom p {
+    font-size: clamp(18px, 10vw, 50px);
+    font-weight: 100;
+    letter-spacing: -2px;
+}
+
+.humidity {
+    margin-right: 10px !important;
+}
+
+.credits {
+    position: fixed;
+    left: 0px !important;
+    bottom: 0px !important;
+    width: 100%;
+    background: #3b4f5c;
+    text-align: center;
+    margin: 20px 0 0 0;
+    color: rgb(204, 240, 252);
+}
+
+.credits a {
+    text-decoration: none;
+    color: rgb(154, 180, 189);
+    transition: .5s;
+}
+
+.credits a:hover {
+    color: rgb(96, 137, 151);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    :root {
+        font-size: 85%;
+    }
+}
+
+@media (min-width: 467px) and (max-width: 767px) {
+    :root {
+        font-size: 80%;
+    }
+    .weather-icon {
+        width: 100px;
+        height: 100px;
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width: 467px) {
+    :root {
+        font-size: 70%;
+    }
+    .weather-icon {
+        width: 75px;
+        height: 75px;
+        padding: 7px 7px;
+    }
+}
