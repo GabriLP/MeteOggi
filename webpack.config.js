@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-    mode: '',
+    mode: 'production',
     entry: {
         main: './src/js/main.js',
         secondary: './src/js/request.js',

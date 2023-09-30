@@ -1,5 +1,5 @@
 import {get} from 'lodash';
-import {requestCity, requestGeolocation, apiKey, lang} from './request.js'
+import {requestCity, requestGeolocation} from './request.js'
 
 
 const searchForm = document.querySelector('.search-location');
@@ -15,7 +15,7 @@ function updateWeatherApp(cityData) {
     // Safely access properties using _.get() from lodash library
     const weatherDescription = get(cityData, 'weather[0].description', '');
     const icon = get(cityData, 'weather[0].icon', '');
-    const iconSrc = `./images/${icon}.png`;
+    const iconSrc = `./src/images/${icon}.png`;
     const temp = kelvinToCelsius(get(cityData, 'main.temp', 0));
     const tempMax = kelvinToCelsius(get(cityData, 'main.temp_max', 0));
     const tempMin = kelvinToCelsius(get(cityData, 'main.temp_min', 0));
