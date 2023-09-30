@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='it'>
+
+    <head>
+        <meta charset='UTF-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meteo del momento</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <section class="container my-5">
+
+            <div id="error-message" class="alert alert-danger d-none"></div>
+            
+            <header>
+            <h1 class="title text-center">
+                InstaMeteo
+            </h1>
+            </header>
+
+            <form class="search-location">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        name="city" 
+                        placeholder="Cerca la località" 
+                        autocomplete="off"
+                        class="form-control text-muted form-rounded p-4 shadow-sm">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn form-rounded shadow-sm">
+                            <img src="./images/search.png" alt="Search" width="20" height="20">
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        <div class="card-rounded my-3 shadow lg d-none back-card animate-slide-in">
+            <div class="card-top text-center">
+                <div class="city-name my-3">
+                    <p>Palermo</p>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="card-mid row">
+                    <div class="col-6 text-center temp">
+                        <span>30&deg;C</span>
+                    </div>
+
+                   
+                    <div class="col-3 condition-temp">    
+                        <p class="condition">Soleggiato</p>
+                        <p class="high">&#8679; 28&deg;C</p>
+                        <p class="low">&#8681; 28&deg;C</p>
+                    </div>
+
+                    <div class="icon-temp col-3">
+
+                        <div class="icon-container card shadow mx-auto">
+                            <img src="./images/01d.png" class="weather-icon">
+                        </div>
+                    </div>
+                
+                    
+
+                    <div id='bottom-wrap'>
+                        <div class="card-bottom px-5 py-4 row">
+                            <div class="col text-center">
+                                <p>30&deg;C</p>
+                                <span>Temperatura percepita</span>
+                            </div>
+                        </div>
+
+                        <div class="card-bottom px-5 py-4 row">
+                            <div class="col text-center">
+                                <p>70%</p>
+                                <span>Umidità</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="credits">
+
+            <p>Sito realizzato da Gabriele La Piana</p>
+            <p>Icone realizzate da <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+                    target="_blank">Freepik</a> sul sito di <a href="https://www.flaticon.com"
+                    title="Flaticon" target="_blank">Flaticon</a></p>
+
+        </footer>
+
+        <script type='module' src="./js/main.js"></script>
+        <script type="module" src="./js/request.js"></script>
+        <script type="module" src="../dist/mainbundle.js"></script>
+        <script type="module" src="../dist/secondarybundle.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: -moz-linear-gradient(-45deg, rgba(241, 249, 255, 1) 0%, rgba(203, 235, 255, 1) 47%, rgba(161, 219, 255, 1) 100%) no-repeat ;
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(241, 249, 255, 1) 0%, rgba(203, 235, 255, 1) 47%, rgba(161, 219, 255, 1) 100%) no-repeat;
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(241, 249, 255, 1) 0%, rgba(203, 235, 255, 1) 47%, rgba(161, 219, 255, 1) 100%) no-repeat;
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f9ff', endColorstr='#a1dbff', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+        color: #707070;
+    background-attachment: fixed;
+}
+
+.container{
+    max-width: 80%;
+    min-height: 100%;
+}
+
+.title {
+    font-weight: 700;
+    font-size: clamp(25px, 10vw, 80px);
+    margin-bottom: 30px;
+}
+
+.search-button {
+    border: none;
+    cursor: pointer;
+    display: flex;
+}
+
+.btn {
+    background-color: white;
+    border-color: rgb(206, 212, 218);
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.animate-slide-in {
+    animation: slide-in 1s ease-out;
+}
+
+.form-rounded {
+    border-radius: 2em;
+}
+
+.back-card {
+    border-radius: 30px;
+    background: white;
+}
+
+
+.city-name p {
+    font-size: clamp(25px, 8vw, 70px);
+}
+
+.temp {
+    font-size: clamp(35px, 15vw, 120px);
+    font-weight: 100;
+    letter-spacing: -4px;
+    color: #757575;
+}
+.condition {
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+.icon-container {
+    align-items: center;
+    border-radius: 100%;
+    width: fit-content;
+}
+.weather-icon {
+    position: flex;
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+}
+
+.condition-temp p {
+    text-align: center;
+}
+
+.high {
+    color: rgb(182, 76, 76);
+}
+
+.low {
+    color: rgb(57, 57, 163);
+}
+
+.high, .low {
+    font-weight: 700;
+}
+
+#bottom-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+
+}
+
+.card-bottom {
+    line-height: 0.7;
+    width: 50%;
+}
+
+.card-bottom span {
+    font-size: 12px;
+}
+
+.card-bottom p {
+    font-size: clamp(18px, 10vw, 50px);
+    font-weight: 100;
+    letter-spacing: -2px;
+}
+
+.credits {
+    position: sticky;
+    text-align: center;
+    margin: 20px 0 0 0;
+    padding: 1em;
+}
+
+.credits a {
+    transition: .3s;
+}
+
+.credits a:hover {
+    color: rgb(1, 73, 95);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    :root {
+        font-size: 85%;
+    }
+}
+
+@media (min-width: 467px) and (max-width: 767px) {
+    :root {
+        font-size: 80%;
+    }
+    .weather-icon {
+        width: 100px;
+        height: 100px;
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width: 467px) {
+    :root {
+        font-size: 70%;
+    }
+    .weather-icon {
+        width: 75px;
+        height: 75px;
+        padding: 7px
+    }
+    .temp {
+        top: 50%;
+    }
+
+    #bottom-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
