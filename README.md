@@ -30,7 +30,6 @@ You can try out the live demo of the MeteOggi app [here](https://gabrilp.github.
 
 1. Allow the app to access your geolocation when prompted.
 2. The app will automatically detect your current location and display the weather and forecast.
-3. You can also manually trigger geolocation by clicking a button.
 
 ### Error Handling
 
@@ -44,6 +43,15 @@ The MeteOggi app relies on the following dependencies:
 - Axios: For making HTTP requests to the OpenWeather API.
 - Lodash: For handling data and object manipulation.
 - Bootstrap: For styling and responsive design.
+- Webpack: For bundling and managing project assets.
+- Babel: For transpiling modern JavaScript code for browser compatibility.
+- Dotenv: For securely managing environment variables.
+- Browserify: For bundling JavaScript modules for browser usage.
+
+You can install these dependencies using npm. For example:
+
+``bash
+npm install axios lodash bootstrap webpack babel-loader dotenv browserify --save ``
 
 ## Development
 
