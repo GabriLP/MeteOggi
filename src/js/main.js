@@ -84,7 +84,7 @@ searchForm.addEventListener('submit', async (event) => {
 
     } catch (error) {
         console.error('Error fetching city data:', error);
-        errorMessage.textContent = 'An error occurred. Please check your search query and try again.';
+        errorMessage.textContent = 'Si è verificato un errore. Controlla la query di ricerca e riprova.';
         errorMessage.classList.remove('d-none');
     }
 });

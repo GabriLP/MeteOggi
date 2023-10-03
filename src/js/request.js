@@ -1,9 +1,7 @@
-//const { config } = require('dotenv');
 import axios from "axios";
 import {get} from "lodash";
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather';
 const lang = 'it';
-//config();
 
 let apiKey;
 
