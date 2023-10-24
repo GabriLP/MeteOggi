@@ -50,8 +50,9 @@ The MeteOggi app relies on the following dependencies:
 
 You can install these dependencies using npm. For example:
 
-``bash
-npm install axios lodash bootstrap webpack babel-loader dotenv browserify --save ``
+```bash
+npm install axios lodash bootstrap webpack babel-loader dotenv browserify --save
+```
 
 ## Development
 
